@@ -1,189 +1,369 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Juliette Grosset
+  label: Post-Doctoral Researcher
+  email: jgrosset10@gmail.com
+  location: Adelaide, South Australia, Australia
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
-
+  summary: Post-Doctoral Researcher at Naval Group, hosted in the IRL CROSSING (CNRS) laboratory in Adelaide, Australia. My research covers maritime simulation, multi-agent systems and autonomous robotics in multi-domain environments (aerial, surface and underwater), with a focus on human-vehicle teaming and energy-aware autonomy. I lead the development of LOTUSim, an open-source real-time maritime simulator, and of its energy-oriented extension LOTUSim-Energy.
   social_networks:
-    - network: X
-      username: AlbertEinstein
     - network: GitHub
-      username: example
+      username: grossetjuliette
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: juliette-grosset
+    - network: Google Scholar
+      username: sf6Hqf0AAAAJ
 
   sections:
-    Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
-        highlights:
-          - Description 1.
-          - Description 2.
-
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
-
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: Naval Group / IRL CROSSING, CNRS
+        logo: cnrs.png
+        position: Post-Doctoral Researcher
+        location: Adelaide, Australia
+        start_date: 2025-02
+        summary: Maritime simulation, multi-agent systems and autonomous robotics in multi-domain environments (aerial, surface, underwater).
         highlights:
-          - Relativity
-          - Description 2.
+          - Development of **LOTUSim**, an open-source real-time maritime simulation platform for human-vehicle teaming, and of **LOTUSim-Energy**, its energy-oriented extension developed within the FACET project.
+          - Member of the LOTUSim Technical Committee and co-leader of the Maritime Working Group at IRL CROSSING; in 2026, Naval Group representative on the IRL CROSSING Management Committee, and elected as a non-permanent member of the IRL CROSSING Laboratory Council.
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: IMT Atlantique / IRISA
+        logo: imt-atlantique.png
+        position: Research Engineer
+        location: Rennes, France
+        start_date: 2024
+        end_date: 2024
+        summary: 3 months on the Alpha Project (Alstef Group), improving the automation of airport baggage transport with a fleet of autonomous industrial vehicles; ideas from my thesis work are reused in this project.
         highlights:
-          - Description 1.
-          - Description 2.
+          - Simulation in CARLA of a scenario with vehicles and an infrastructure camera, to demonstrate the value of local cooperation, using my V2X message generation architecture.
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+      - company: ECAM Rennes - Louis de Broglie / IMT Atlantique / IRISA
+        logo: ecam-rennes.png
+        position: PhD Student
+        location: Rennes, France
+        start_date: 2021
+        end_date: 2024
+        summary: Collective intelligence strategies for efficient autonomous industrial vehicles (AIVs) in Industry 4.0 contexts, within the EASE team at IRISA.
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+          - Shared-perception-based obstacle and collision avoidance strategy for AIV fleets.
+          - Adaptation of V2X communication standards to Industry 4.0 and a V2X data generation architecture.
+          - Decentralised dynamic task (re)allocation mechanism and fuzzy-model-based collective energy management.
+
+      - company: IMT Atlantique, Lab-STICC
+        position: Laboratory Technician
+        logo: imt-atlantique.png
+        location: Brest, France
+        start_date: 2021
+        end_date: 2021
+
+      - company: IMT Atlantique, Lab-STICC
+        position: Research Intern
+        logo: imt-atlantique.png
+        location: Brest, France
+        start_date: 2021
+        end_date: 2021
+        summary: 6-month research internship.
+
+      - company: ENIB
+        logo: enib.png
+        position: Pedagogical Tutor
+        location: Brest, France
+        start_date: 2021
+        end_date: 2021
+        summary: One semester.
+
+      - company: INRIA / IRISA
+        logo: irisa.png
+        position: Assistant Engineer Intern
+        location: Rennes, France
+        start_date: 2020
+        end_date: 2020
+        summary: 5-month internship.
+
+      - company: King Mongkut's University of Technology Thonburi (KMUTT)
+        logo: kmutt.png
+        position: Technical Intern
+        location: Bangkok, Thailand
+        start_date: 2019
+        end_date: 2019
+        summary: 3-month internship in the Computer Science Laboratory.
+
+    Education:
+      - institution: IMT Atlantique
+        logo: imt-atlantique.png
+        location: Rennes, France
+        url: https://www.imt-atlantique.fr/
+        area: Computer Science
+        studyType: PhD
+        start_date: 2021
+        end_date: 2024
+        highlights:
+          - "Thesis: *Collective intelligence strategies for efficient autonomous industrial vehicles*, prepared at IMT Atlantique and ECAM Rennes - Louis de Broglie (EASE team, IRISA)."
+          - "PhD supervisors: Jean-Marie Bonnin (Professor, IMT Atlantique) and Alain-Jérôme Fougères (Professor, ECAM Louis de Broglie). Co-supervision: Moïse Djoko-Kouam (ECAM Louis de Broglie)."
+          - "Reviewers: Leila Merghem-Boulahia and Gérard Chalhoub. Jury: Maroua Bouzid (chair), Leila Merghem-Boulahia, Gérard Chalhoub, Cédric Buche."
+          - "Awarded **Best Thesis of the SPIN Doctoral School** (2025). Co-funded by Région Bretagne (ARED grant) and ECAM Louis de Broglie."
+          - "Defence recording: [youtube.com/watch?v=MysGH68KfAY](https://www.youtube.com/watch?v=MysGH68KfAY)."
+
+      - institution: UBO / ENSTA Bretagne / IMT Atlantique / ENIB
+        short: SIIA
+        location: Brest, France
+        area: Intelligent, Interactive and Autonomous Systems (SIIA)
+        studyType: Master's degree
+        start_date: 2020
+        end_date: 2021
+
+      - institution: ENIB - École Nationale d'Ingénieurs de Brest
+        logo: enib.png
+        location: Brest, France
+        url: https://www.enib.fr/
+        area: Computer Science, Electronics and Mechatronics
+        studyType: Diplôme d'Ingénieur (Engineering degree)
+        start_date: 2018
+        end_date: 2021
+        highlights:
+          - Specialised modules in Artificial Intelligence, Simulation and Robotics.
+
+      - institution: Université de Sherbrooke
+        logo: sherbrooke.png
+        location: Sherbrooke, Canada
+        area: Engineering
+        studyType: Academic exchange semester
+        start_date: 2018
+        end_date: 2018
+
+    Qualifications:
+      - label: CNU 27
+        details: Qualification for Associate Professor (Maître de conférences) positions in Computer Science, Conseil National des Universités (France).
 
     Awards:
-      - title: Nobel Prize in Physics
+      - title: Best Thesis of the SPIN Doctoral School
+        date: 2025
+        awarder: SPIN Doctoral School
         authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+          - "SPIN Doctoral School"
+        url: https://ed-spin.doctorat-bretagne.fr/fr/actualites/prix-de-these-2025-decerne-juliette-grosset
+        summary: Selection covering PhD theses defended over the 2024-2025 period (approx. 160 candidates), decided by a jury of 13 members.
 
-      - title: Max Planck Medal
+      - title: Best Paper Award
+        date: 2024
+        awarder: ASPAI 2024
         authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+          - "ASPAI 2024"
+        summary: 6th International Conference on Advances in Signal Processing and Artificial Intelligence, Funchal, Portugal.
 
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
+      - title: Best Presentation Award (ex aequo)
+        date: 2024
+        awarder: Colloque IMT 2024
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+          - "Colloque IMT 2024"
+        summary: "Aix-Marseille-Provence. Topic: Responsible Future Industry."
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
+      - title: 4th Prize - Ma Thèse en 180 secondes
+        date: 2024
+        awarder: Ma Thèse en 180 secondes, Rennes qualification round
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+          - "Ma Thèse en 180 secondes, Rennes qualification round"
+        url: https://www.youtube.com/live/boeOIIVBo8c?t=2219
+        summary: Followed by participation in the regional final in Brest.
 
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
+      - title: Best Poster Award (ex aequo)
+        date: 2022
+        awarder: Colloque IMT 2022
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+          - "Colloque IMT 2022"
+        summary: "Palaiseau. Topic: Information sciences for new mobilities."
 
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+    International Mobility:
+      - label: "2025-2026"
+        details: Adelaide, Australia (2 years) - Post-Doctoral Researcher, IRL CROSSING / Naval Group.
+      - label: "2025"
+        details: Singapore (1 week, August 2025) - visit to the Naval Group Center of Excellence.
+      - label: "2023"
+        details: Tokyo, Japan (3 months) - PhD research mobility, Tsukada Laboratory, University of Tokyo.
+      - label: "2019"
+        details: Bangkok, Thailand (3 months) - research internship, KMUTT.
+      - label: "2018"
+        details: Sherbrooke, Canada (4 months) - academic exchange semester.
+
+    Research Interests:
+      - label: Keywords
+        details: Distributed systems, robotics, artificial intelligence, simulation, cooperative autonomy, maritime context, ITS context, human-in-the-loop.
+
+    Grants:
+      - label: "2026-2027"
+        details: "[Member] LOTUSim-Energy - FACET (French and Australian Government funding). Maritime and energy.<br>Approx. 135 k€."
+      - label: "2025"
+        details: "[Member] LOTUSim-Energy - FACET, in collaboration with Reuniwatt. Maritime and energy.<br>Approx. 50 k AUD."
+
+    Leadership and Committees:
+      - label: 2026 - present
+        details: "Elected, Non-permanent member, IRL CROSSING Laboratory Council."
+      - label: "2026"
+        details: Naval Group representative, IRL CROSSING Management Committee.
+      - label: 2026 - present
+        details: Co-leader, Maritime Working Group, IRL CROSSING (Australia).
+      - label: 2025 - present
+        details: Member, LOTUSim Technical Committee (Naval Group).
+      - label: "2025"
+        details: Leader of the LOTUSim open-source release - Naval Group's first open-source simulator.
+
+    Service:
+      - label: Reviewing (conferences)
+        details: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2026; International Conference on Autonomous Agents and Multiagent Systems (AAMAS), 2026 (5 papers).
+      - label: Reviewing (journals)
+        details: IEEE Sensors (2026); SN Computer Science (Springer Nature, 2026); Journal of Autonomous Intelligence (2023).
+      - label: Hiring committees
+        details: Research Engineer positions at IRL CROSSING / CNRS (2026) and Naval Group / IRL CROSSING (2025); Post-Doctoral position at ECAM Rennes - Louis de Broglie (2023).
+      - label: Event organisation
+        details: Co-organiser of the FACET Offshore Wind Maintenance Workshop, Adelaide (2025); organising committee of PFIA 2022 and JJCR 2022 (France).
+      - label: Scientific groups
+        details: Maritime Working Group, IRL CROSSING (2026-); GDR Robotique (2022); French Artificial Intelligence Association - AFIA (2022).
+
+    Student Supervision:
+      - name: Thomas Ung
+        date: 2026-2029
+        current: true
+        summary: "PhD co-supervision (25 %), cotutelle IMT Atlantique / ANU · IRL CROSSING. Supervisors: C. Buche (IMT Atlantique), K. Daniell (ANU); co-supervisors: L. Bergantin, J. Grosset"
+        highlights:
+          - Internal simulation for adaptive human–robot engagement.
+      - name: Marie Dubromel
+        date: 2025-2026
+        current: true
+        summary: "Research Engineer, Naval Group · IRL CROSSING"
+        highlights:
+          - LOTUSim and LOTUSim-Energy.
+      - name: Loris Cazaux
+        date: 2026
+        current: true
+        summary: "Engineering apprentice (IT), ESIGELEC / RTE (France) — 5.5 months, supervision 100 % · IRL CROSSING"
+        highlights:
+          - Towards an abstract and modular architecture for LOTUSim-Energy.
+      - name: Baptiste Piar
+        date: 2026
+        current: true
+        summary: "Master, Mines Paris – PSL — 5 months, supervision 50 % · IRL CROSSING"
+        highlights:
+          - Building a controller baseline for AUVs — from PID towards MPC under flowing currents.
+      - name: Ella James
+        date: 2026
+        current: true
+        summary: "Bachelor of Mathematical Sciences, Flinders University (Australia) — 3 months, supervision 50 % · IRL CROSSING"
+        highlights:
+          - Development and comparison of wind models for simulating wind turbine energy output.
+      - name: Riley Morrison
+        date: 2026
+        current: true
+        summary: "Bachelor of Computer Science, Flinders University (Australia) — 06 Jul – 11 Dec 2026, supervision 50 % · IRL CROSSING"
+        highlights:
+          - Migration of vision-based SLAM pipeline to ROS2 for lunar rover navigation, validation and deployment.
+      - name: Kartikeya Dashora
+        date: 2026
+        current: true
+        summary: "Bachelor of Engineering (Robotics), Flinders University (Australia) — 20 Jul 2026 – 18 Jan 2027, supervision 50 % · IRL CROSSING"
+        highlights:
+          - Real-time MHE-based MPC for AUV trajectory tracking under time-varying currents — simulation and experimental validation.
+      - name: Hayato Donoghue
+        date: 2026
+        current: true
+        summary: "Bachelor of IT (Game Development), Flinders University (Australia) — 27 Jul – 09 Nov 2026, supervision 50 % · IRL CROSSING"
+        highlights:
+          - LOTUSim development and enhancement through game design, simulation content creation and environment development. Focus on simulator experience, visual design, scene refinement, training scenarios, realism, user experience, visual consistency and optimisation.
+      - name: Bevan Shajan
+        date: 2026
+        current: true
+        summary: "Bachelor of Engineering (Robotics) (Honours), Flinders University (Australia) — 27 Jul – 14 Dec 2026, supervision 50 % · IRL CROSSING"
+        highlights:
+          - Integration of crack detection algorithms into LOTUSim, exploration of event cameras for crack and corrosion detection, comparison of detection approaches through simulation and potential real-world experiments, and enhancement of LOTUSim for maritime inspection research.
+      - name: Gechhai Thornthea
+        date: 2026
+        current: true
+        summary: "Bachelor of Computer Science, Adelaide University — 11 Aug – 13 Nov 2026, supervision 50 % · IRL CROSSING"
+        highlights:
+          - Integration of Gymnasium into LOTUSim.
+      - name: Adelaide University project group
+        date: 2026
+        current: true
+        summary: "5 students — supervision 50 % · Adelaide University"
+        highlights:
+          - Integration of Pixhawk-based drone systems into LOTUSim using ROS 2 and Gazebo, enabling manual control and mission-based simulation.
+      - name: Juan Cuevas
+        date: 2024
+        summary: "MSc IoT Architecture and Engineering, IMT Atlantique — 6 months, supervision 50 %"
+        highlights:
+          - Real-world robot experimentation of a cooperative intersection algorithm using ROS 2 and V2X communication.
+      - name: Kazuto Matsumoto
+        date: 2024
+        summary: "Master of Computer Applications, University of Tokyo — 2 months, supervision 50 % · IMT Atlantique"
+        highlights:
+          - Deep learning approaches for predicting obstacle position and velocity from virtual camera inputs in the CARLA simulator.
+      - name: Satoru Furuta
+        date: 2024
+        summary: "Master of Computer and Information Sciences, University of Tokyo — 2 months, supervision 50 % · IMT Atlantique"
+        highlights:
+          - Camera-based obstacle detection in Gazebo and BIM-oriented environment reconstruction.
+      - name: Iheb Hamed
+        date: 2024
+        summary: "5th year engineering student, Polytech Tunis — 5 months, supervision 50 % · ECAM Rennes"
+        highlights:
+          - Study and development of a multi-task mission management solution based on ground drones in a ROS 2 environment.
+      - name: IMT Atlantique project group
+        date: 2023-2024
+        summary: "4 students — supervision 50 % · IMT Atlantique"
+        highlights:
+          - Simulation of vehicle–infrastructure interactions with the CARLA simulator, including industrial robots in a simplified urban environment of Rennes.
+      - name: Rihab Binous
+        date: 2023
+        summary: "5th year engineering student, Polytech Tunis — 5 months, supervision 50 % · ECAM Rennes"
+        highlights:
+          - Study and development of a multi-task mission management solution performed by heterogeneous mobile robots.
+      - name: ECAM Rennes project group
+        date: 2022-2023
+        summary: "6 students — supervision 50 % · ECAM Rennes – Louis de Broglie"
+        highlights:
+          - Improvement of the performance and communication of a drone fleet.
+
+    Evaluation Juries:
+      - label: 2025 (Sep.)
+        details: 1 engineering internship defence, ENSTA.
+      - label: 2023 (Oct.)
+        details: 6 foreign-internship defences (in English) and 1 technical internship defence, ECAM Rennes.
+      - label: 2022 (Oct.)
+        details: 3 engineering-degree defences, ECAM Rennes.
+      - label: 2022 (Jan.)
+        details: 1 project defence, ECAM Rennes (3rd year, Terrestrial Drones module).
+
+    Invited Talks:
+      - label: "2025"
+        details: SPIN Doctoral School Welcome Days - PhD Prize ceremony.
+      - label: "2024"
+        details: Jeudi de la Recherche 2024, ECAM Rennes - Louis de Broglie.
+      - label: "2023"
+        details: Jeudi de la Recherche 2023, ECAM Rennes - Louis de Broglie.
+
+    Science Communication:
+      - bullet: "**Ma Thèse en 180 secondes** (2024): 4th jury prize at the Rennes qualification round and participation in the regional final in Brest."
+      - bullet: "**L codent L créent** (2023): 8 sessions of Python programming workshops for middle-school girls in Rennes, addressing gender stereotypes in science and technology."
+
+    Open Source Projects:
+      - name: LOTUSim
+        url: https://github.com/naval-group/LOTUSim
+        summary: Open-source real-time maritime simulation platform for human-vehicle teaming (Naval Group).
+      - name: LOTUSim-Energy
+        url: https://github.com/IRL-Crossing-CNRS/LOTUSim-Energy
+        summary: Energy-oriented extension of LOTUSim for offshore wind operation and maintenance, developed within the FACET project.
+      - name: LOTUSim-generic-scenario
+        url: https://github.com/naval-group/LOTUSim-generic-scenario
+        summary: Generic scenarios for the LOTUSim simulator.
+      - name: LOTUSim-Unity-modules
+        url: https://github.com/naval-group/LOTUSim-Unity-modules
+        summary: Unity modules for the LOTUSim simulator.
+      - name: AIV Simulator
+        url: https://gitlab.inria.fr/jgrosset/AIV_Simulator
+        summary: Multi-agent simulator of autonomous industrial vehicle fleets developed during my PhD.
+      - name: CARLA-ROS2-OpenCDA architecture
+        url: https://gitlab.inria.fr/jgrosset/carla-v2x-release
+        summary: V2X message generation architecture coupling the CARLA simulator, ROS2 and OpenCDA.
 
     Languages:
-      - name: German
-        summary: "Native speaker"
-
+      - name: French
+        summary: Native speaker
       - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+        summary: Fluent

@@ -33,7 +33,31 @@ layout: default
       {% endif %}
     </h1>
     {% if page.description %}
-      <p class="post-description">{{ page.description }}</p>
+      <p class="post-description">{% include t.liquid en=page.description fr=page.description_fr %}</p>
+    {% endif %}
+    {% if page.cv_downloads %}
+      <div class="cv-downloads">
+        <p class="cv-downloads-text">
+          <span class="lang-en"><strong>Full academic CV</strong> — every position, publication, supervision and grant, as PDF.</span
+          ><span class="lang-fr"
+            ><strong>CV académique complet</strong> — tous les postes, publications, encadrements et financements, en PDF. Le détail ci-dessous est en
+            anglais.</span
+          >
+        </p>
+        <div class="cv-downloads-buttons">
+          {% for doc in page.cv_downloads %}
+            <a href="{{ doc.url | relative_url }}" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-file-pdf"></i> {{ doc.label }}
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+    {% if page.cv_summary %}
+      <div class="cv-summary">
+        <p class="paper-card-title"><span class="lang-en">Executive summary</span><span class="lang-fr">Synthèse</span></p>
+        {% include executive_summary.liquid %}
+      </div>
     {% endif %}
   </header>
 
@@ -61,7 +85,7 @@ layout: default
         {% assign cv = site.data.cv.cv %}
 
         <!-- Header/Contact Information -->
-        {% if cv.name or cv.label or cv.location or cv.email or cv.phone or cv.website %}
+        {% if page.cv_hide_intro != true and cv.name or cv.label or cv.location or cv.email or cv.phone or cv.website %}
           <div class="card mt-3 p-3">
             <h3 class="card-title font-weight-medium">Contact Information</h3>
             <table class="table table-cv table-sm table-borderless">
@@ -113,7 +137,7 @@ layout: default
         {% endif %}
 
         <!-- Summary -->
-        {% if cv.summary %}
+        {% if cv.summary and page.cv_hide_intro != true %}
           <div class="card mt-3 p-3">
             <h3 class="card-title font-weight-medium">Professional Summary</h3>
             <p>{{ cv.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
@@ -129,7 +153,7 @@ layout: default
         {% if combined_experience.size > 0 %}
           <a class="anchor" id="experience"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Experience</h3>
+            <h3 class="card-title font-weight-medium"><span class="lang-en">Experience</span><span class="lang-fr">Expérience</span></h3>
             <div>
               {% assign entries = combined_experience %}
               {% include cv/experience.liquid %}
@@ -146,10 +170,16 @@ layout: default
           {% if section_title == 'Experience' or section_title == 'Volunteer' %}
             {% continue %}
           {% endif %}
+          {% if page.cv_skip contains section_title %}
+            {% continue %}
+          {% endif %}
 
           <a class="anchor" id="{{ section_title | slugify }}"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ section_title }}</h3>
+            <h3 class="card-title font-weight-medium">
+              {% assign st_fr = site.data.cv_titles_fr[section_title] | default: section_title -%}
+              {%- include t.liquid en=section_title fr=st_fr %}
+            </h3>
             <div>
               {% if section_title == 'Education' %}
                 {% assign entries = section_entries %}
@@ -175,6 +205,9 @@ layout: default
               {% elsif section_title == 'Projects' or section_title == 'Open Source Projects' %}
                 {% assign entries = section_entries %}
                 {% include cv/projects.liquid %}
+              {% elsif section_title contains 'Supervision' or section_title contains 'Timeline' %}
+                {% assign entries = section_entries %}
+                {% include cv/timeline.liquid %}
               {% elsif section_title == 'References' %}
                 {% assign entries = section_entries %}
                 {% include cv/references.liquid %}
@@ -390,3 +423,5 @@ layout: default
     </div>
   </article>
 </div>
+
+{% include side_toc.liquid scope='.cv' headings='h3.card-title' %}

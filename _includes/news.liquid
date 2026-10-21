@@ -16,7 +16,24 @@
         {% endif %}
         {% for item in news limit: news_limit %}
           <tr>
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+            <th scope="row" style="width: 20%">
+              {% assign mois = 'janv.,févr.,mars,avr.,mai,juin,juil.,août,sept.,oct.,nov.,déc.' | split: ',' %}
+              {% assign m = item.date | date: '%-m' | minus: 1 %}
+              {% if item.date_precision == 'month' %}
+                <span class="lang-en">{{ item.date | date: '%b %Y' }}</span
+                ><span class="lang-fr">
+                  {{- mois[m] }}
+                  {{ item.date | date: '%Y' -}}
+                </span>
+              {% else %}
+                <span class="lang-en">{{ item.date | date: '%b %d, %Y' }}</span
+                ><span class="lang-fr">
+                  {{- item.date | date: '%-d' }}
+                  {{ mois[m] }}
+                  {{ item.date | date: '%Y' -}}
+                </span>
+              {% endif %}
+            </th>
             <td>
               {% if item.inline %}
                 {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}

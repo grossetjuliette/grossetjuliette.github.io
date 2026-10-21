@@ -1,0 +1,221 @@
+/* Paper-style project pages and the supervision timeline on the CV page. */
+
+.project-header {
+  margin-bottom: 2rem;
+
+  .project-eyebrow {
+    margin-bottom: 0.4rem;
+    color: var(--global-theme-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .project-authors {
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+
+    a {
+      color: var(--global-text-color);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+
+    .me {
+      font-weight: 700;
+    }
+  }
+
+  .project-affiliations {
+    margin-bottom: 1rem;
+    color: var(--global-text-color-light);
+    font-size: 0.85rem;
+  }
+
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+
+    .btn {
+      border: 1px solid var(--global-divider-color);
+      color: var(--global-text-color);
+
+      &:hover {
+        background-color: var(--global-theme-color);
+        border-color: var(--global-theme-color);
+        color: var(--global-hover-text-color);
+      }
+    }
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 0;
+  }
+
+  .project-tag {
+    padding: 0.15rem 0.55rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    color: var(--global-text-color-light);
+    font-size: 0.75rem;
+  }
+}
+
+/* Figure captions sit closer to their figure than the theme default. */
+.project-figure {
+  margin: 1.75rem 0;
+
+  .caption {
+    margin-top: 0.5rem;
+    font-size: 0.82rem;
+  }
+}
+
+/* BibTeX / citation block */
+.project-citation pre {
+  padding: 0.9rem 1rem;
+  background-color: var(--global-code-bg-color);
+  border-radius: 6px;
+  font-size: 0.78rem;
+  overflow-x: auto;
+}
+
+/* -------------------------------------------------------------------------
+   Supervision timeline ("frise") used on the CV and teaching pages
+   ------------------------------------------------------------------------- */
+
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 1.75rem;
+  list-style: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.4rem;
+    bottom: 0.4rem;
+    left: 0.32rem;
+    width: 2px;
+    background: var(--global-divider-color);
+  }
+
+  > li {
+    position: relative;
+    padding-bottom: 1.5rem;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.35rem;
+      left: -1.75rem;
+      width: 0.75rem;
+      height: 0.75rem;
+      border: 2px solid var(--global-theme-color);
+      border-radius: 50%;
+      background: var(--global-bg-color);
+    }
+
+    &.is-current::before {
+      background: var(--global-theme-color);
+    }
+  }
+
+  .timeline-date {
+    display: inline-block;
+    margin-right: 0.5rem;
+    color: var(--global-theme-color);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .timeline-title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .timeline-meta {
+    color: var(--global-text-color-light);
+    font-size: 0.85rem;
+  }
+
+  .timeline-topic {
+    margin-top: 0.15rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Institution logos next to CV experience / education entries
+   ------------------------------------------------------------------------- */
+
+.cv-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin: 0 auto 0.4rem;
+  padding: 0.25rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  background: #fff;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.cv-logo-mono {
+  background: var(--global-theme-color);
+  color: var(--global-hover-text-color);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 1.1;
+}
+
+/* A row of collaborator logos, e.g. on the about page. */
+.logo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+
+  img {
+    max-height: 2.75rem;
+    max-width: 8rem;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+html[data-theme="dark"] .logo-strip img,
+html[data-theme="dark"] .cv-logo {
+  filter: none;
+}

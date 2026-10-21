@@ -1,34 +1,35 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"bonnin":
+  - firstname: ["Jean-Marie", "J.-M.", "J.M."]
+    url: https://www.imt-atlantique.fr/fr/personne/jean-marie-bonnin
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"buche":
+  - firstname: ["Cédric", "C."]
+    url: https://cedricbuche.github.io/
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"dubromel":
+  - firstname: ["Marie", "M."]
+    url: https://www.linkedin.com/in/marie-dubromel-922150221/
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"lechene":
+  - firstname: ["Hélène", "H."]
+    url: https://scholar.google.com/citations?user=B21SMLgAAAAJ&hl=en
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"lechêne":
+  - firstname: ["Hélène", "H."]
+    url: https://scholar.google.com/citations?user=B21SMLgAAAAJ&hl=en
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"arzel":
+  - firstname: ["Quentin", "Q."]
+    url: https://www.linkedin.com/in/quentin-arzel-bbb5941a6/
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"havez-bodivit":
+  - firstname: ["Pierig", "P."]
+    url: https://www.linkedin.com/in/pierighavez-bodivit/
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"neo":
+  - firstname: ["Malcom", "M."]
+    url: https://www.linkedin.com/in/malcolmneo/
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"prodhon":
+  - firstname: ["Julien", "J."]
+    url: https://github.com/julienprodhon

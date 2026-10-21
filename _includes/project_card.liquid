@@ -1,0 +1,44 @@
+{% comment %}
+  Card on the projects index (CROSSING-style): cover image, venue, title, description,
+  tags, and a footer with the project link and quick links (paper, video, code).
+{% endcomment %}
+{% assign href = project.redirect | default: project.url | relative_url %}
+<article class="project-card">
+  {% if project.img %}
+    <a class="project-card-img" href="{{ href }}">
+      <img src="{{ project.img | relative_url }}" alt="{{ project.title }}" loading="lazy">
+    </a>
+  {% endif %}
+  <div class="project-card-body">
+    {% if project.venue -%}
+      <span class="project-card-venue">{% include t.liquid en=project.venue fr=project.venue_fr %}</span>
+    {%- endif %}
+    <h3 class="project-card-title">
+      <a href="{{ href }}">
+        {%- include t.liquid en=project.title fr=project.title_fr -%}
+        <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i
+      ></a>
+    </h3>
+    <p class="project-card-desc">{% include t.liquid en=project.description fr=project.description_fr %}</p>
+    {% if project.tags %}
+      <div class="paper-tags">
+        {% for tag in project.tags limit: 4 -%}
+          <span>{{ tag }}</span>
+        {%- endfor %}
+      </div>
+    {% endif %}
+    <div class="project-card-footer">
+      <a class="project-card-more" href="{{ href }}">
+        {%- include t.liquid en="View project" fr="Voir le projet" %}
+        <i class="fa-solid fa-arrow-right fa-xs"></i
+      ></a>
+      <span class="project-card-links">
+        {% for link in project.links limit: 4 %}
+          {% if link.icon %}
+            <a href="{{ link.url }}" title="{{ link.label }}" target="_blank" rel="noopener noreferrer"><i class="{{ link.icon }}"></i></a>
+          {% endif %}
+        {% endfor %}
+      </span>
+    </div>
+  </div>
+</article>

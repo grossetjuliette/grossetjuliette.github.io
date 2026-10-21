@@ -1,0 +1,18 @@
+{% comment %}
+  Institution mark shown next to a CV entry.
+  Uses `entry.logo` (a file in assets/img/logos/) when one is available, and falls
+  back to a monogram built from `entry.short` otherwise. Renders nothing if neither
+  is set, so entries without a mark still lay out correctly.
+{% endcomment %}
+
+{% if entry.logo %}
+  <div class="cv-logo">
+    <img
+      src="{{ entry.logo | prepend: '/assets/img/logos/' | relative_url }}"
+      alt="{{ entry.company | default: entry.institution }} logo"
+      loading="lazy"
+    />
+  </div>
+{% elsif entry.short %}
+  <div class="cv-logo cv-logo-mono" aria-hidden="true">{{ entry.short }}</div>
+{% endif %}

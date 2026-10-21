@@ -1,81 +1,52 @@
-# Agent Guidelines for al-folio
+# Agent guidelines
 
-A simple, clean, and responsive Jekyll theme for academics.
+Personal academic website of Juliette Grosset — Jekyll + the [al-folio](https://github.com/alshedivat/al-folio) theme, deployed to GitHub Pages.
 
-## Quick Links by Role
+## Build and preview
 
-- **Are you a coding agent?** → Read [`.github/copilot-instructions.md`](.github/copilot-instructions.md) first (tech stack, build, CI/CD, common pitfalls & solutions)
-- **Customizing the site?** → See [`.github/agents/customize.agent.md`](.github/agents/customize.agent.md)
-- **Writing documentation?** → See [`.github/agents/docs.agent.md`](.github/agents/docs.agent.md)
-- **Need setup/deployment help?** → [INSTALL.md](INSTALL.md)
-- **Troubleshooting & FAQ?** → [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
-- **Customization & theming?** → [CUSTOMIZE.md](CUSTOMIZE.md)
-- **Quick 5-min start?** → [QUICKSTART.md](QUICKSTART.md)
-
-## Essential Commands
-
-### Local Development (Docker)
-
-The recommended approach is using Docker.
+Docker is the supported path (Docker Desktop must be running):
 
 ```bash
-# Initial setup & start dev server
-docker compose pull && docker compose up
-# Site runs at http://localhost:8080
-
-# Rebuild after changing dependencies or Dockerfile
-docker compose up --build
-
-# Stop containers and free port 8080
+docker compose up          # http://localhost:8080, live reload
+docker compose up --build  # after changing Dockerfile or Gemfile
 docker compose down
 ```
 
-### Pre-Commit Checklist
+## Before committing
 
-Before every commit, you **must** run these steps:
+```bash
+npx prettier . --write     # first time: npm install --save-dev prettier @shopify/prettier-plugin-liquid
+docker compose up --build  # verify pages, navigation, links and dark mode at http://localhost:8080
+```
 
-1.  **Format Code:**
-    ```bash
-    # (First time only)
-    npm install --save-dev prettier @shopify/prettier-plugin-liquid
-    # Format all files
-    npx prettier . --write
-    ```
-2.  **Build Locally & Verify:**
+## Content map
 
-    ```bash
-    # Rebuild the site
-    docker compose up --build
+| What                                       | File                                                                             |
+| ------------------------------------------ | -------------------------------------------------------------------------------- |
+| Homepage bio                               | `_pages/about.md`                                                                |
+| Publications (jekyll-scholar)              | `_bibliography/contributions.bib`                                                |
+| CV page                                    | `_data/cv.yml` (`cv_skip` in `_pages/cv.md` hides sections shown on other pages) |
+| Teaching                                   | `_pages/teaching.md`                                                             |
+| Supervision (PhD, engineers, interns)      | `_pages/supervision.md`                                                          |
+| Responsibilities, reviewing, juries        | `_pages/responsibilities.md`                                                     |
+| Full LaTeX CV PDFs (EN/FR, copied in)      | `assets/pdf/`                                                                    |
+| Projects (`layout: paper`, CROSSING-style) | `_projects/`, `_layouts/paper.liquid`                                            |
+| Homepage news                              | `_news/`                                                                         |
+| Repositories page                          | `_data/repositories.yml`                                                         |
+| Co-author links in the bibliography        | `_data/coauthors.yml`                                                            |
+| Site metadata, navigation, theme options   | `_config.yml`                                                                    |
 
-    # Verify by visiting http://localhost:8080.
-    # Check navigation, pages, images, and dark mode.
-    ```
+## Things to know
 
-## Critical Configuration
+- Colours follow the IRL CROSSING palette (`_sass/_themes.scss`); custom components live in `_sass/_academic.scss`.
 
-When modifying `_config.yml`, these **must be updated together**:
+- `_config.yml` sets `scholar.bibliography: contributions.bib`; that file is the only
+  bibliography the site reads. `selected = {true}` promotes an entry to the homepage.
+- `_data/cv.yml` follows the schema al-folio's `cv.liquid` renders (`label`, `studyType`,
+  `title`/`awarder` awards, `label`/`details` one-line entries). The downloadable CVs are the LaTeX PDFs in
+  `assets/pdf/` (copied from the CV_juliette repository), not a rendered version of this file.
+- There is no blog: `_posts`, the bookshelf and `jekyll-archives` have been removed. Re-adding
+  posts means restoring `_pages/blog.md`, the pagination settings and the archives config.
+- Files listed under `exclude:` in `_config.yml` are not published; keep repo documentation there.
 
-- **Personal site:** `url: https://username.github.io` + `baseurl:` (empty)
-- **Project site:** `url: https://username.github.io` + `baseurl: /repo-name/`
-- **YAML errors:** Quote strings with special characters: `title: "My: Cool Site"`
-
-## Development Workflow
-
-- **Git & Commits:** For commit message format and Git practices, see [.github/GIT_WORKFLOW.md](.github/GIT_WORKFLOW.md).
-- **Code-Specific Instructions:** Consult the relevant instruction file for your code type.
-
-| File Type                                     | Instruction File                                                                                |
-| --------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| Markdown content (`_posts/`, `_pages/`, etc.) | [markdown-content.instructions.md](.github/instructions/markdown-content.instructions.md)       |
-| YAML config (`_config.yml`, `_data/`)         | [yaml-configuration.instructions.md](.github/instructions/yaml-configuration.instructions.md)   |
-| BibTeX (`_bibliography/`)                     | [bibtex-bibliography.instructions.md](.github/instructions/bibtex-bibliography.instructions.md) |
-| Liquid templates (`_includes/`, `_layouts/`)  | [liquid-templates.instructions.md](.github/instructions/liquid-templates.instructions.md)       |
-| JavaScript (`_scripts/`)                      | [javascript-scripts.instructions.md](.github/instructions/javascript-scripts.instructions.md)   |
-
-## Common Issues
-
-For troubleshooting, see:
-
-- [Common Pitfalls & Workarounds](.github/copilot-instructions.md#common-pitfalls--workarounds) in copilot-instructions.md
-- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for detailed solutions
-- [GitHub Issues](https://github.com/alshedivat/al-folio/issues) to search for your specific problem.
+Upstream theme documentation: <https://github.com/alshedivat/al-folio>.

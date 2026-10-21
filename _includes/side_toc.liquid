@@ -1,0 +1,11 @@
+{% comment %}
+  Sticky "on this page" navigation in the left margin (wide screens only), built by
+  assets/js/section-toc.js from the visible h2 headings in `include.scope`.
+{% endcomment %}
+<nav class="home-toc side-toc" aria-label="On this page" hidden>
+  <p class="paper-card-title">{% include t.liquid en="On this page" fr="Sur cette page" %}</p>
+</nav>
+<script src="{{ '/assets/js/section-toc.js' | relative_url | bust_file_cache }}"></script>
+<script>
+  buildSectionToc(document.querySelector('.side-toc'), "{{ include.scope | default: 'article' }} {{ include.headings | default: 'h2' }}", true);
+</script>

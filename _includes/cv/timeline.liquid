@@ -1,0 +1,37 @@
+{% comment %}
+  Timeline ("frise") renderer, used for student supervision on the CV page.
+  Each entry: name, date (or start_date/end_date), location, summary, highlights,
+  plus the optional `current: true` flag to fill the marker.
+{% endcomment %}
+
+<ul class="timeline">
+  {% for entry in entries %}
+    <li
+      {% if entry.current %}
+        class="is-current"
+      {% endif %}
+    >
+      {% capture date %}
+        {%- if entry.date -%}
+          {{ entry.date }}
+        {%- elsif entry.start_date -%}
+          {{ entry.start_date | split: '-' | first }} – {{ entry.end_date | split: '-' | first | default: 'present' }}
+        {%- endif -%}
+      {% endcapture %}
+      {% if date != '' %}
+        <span class="timeline-date">{{ date }}</span>
+      {% endif %}
+      {% if entry.name %}
+        <span class="timeline-title">{{ entry.name }}</span>
+      {% endif %}
+      {% if entry.summary %}
+        <div class="timeline-meta">{{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+      {% endif %}
+      {% if entry.highlights %}
+        {% for item in entry.highlights %}
+          <div class="timeline-topic">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+        {% endfor %}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

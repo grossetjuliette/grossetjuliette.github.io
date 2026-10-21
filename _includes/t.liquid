@@ -1,0 +1,5 @@
+{%- comment -%}
+  Bilingual inline text: {% include t.liquid en="About" fr="À propos" %}.
+  The language toggle (assets/js/lang.js) shows one of the two spans.
+{%- endcomment -%}
+<span class="lang-en">{{ include.en }}</span><span class="lang-fr">{{ include.fr | default: include.en }}</span>
