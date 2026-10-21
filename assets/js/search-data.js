@@ -51,19 +51,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "news-i-started-a-post-doctoral-position-at-naval-group-hosted-in-the-irl-crossing-cnrs-laboratory-in-adelaide-australia",
+        },{id: "news-i-started-a-post-doctoral-position-at-naval-group-hosted-in-the-irl-crossing-cnrs-laboratory-in-adelaide-australia-j-ai-commencé-un-post-doctorat-chez-naval-group-accueillie-au-sein-de-l-irl-crossing-cnrs-à-adelaide-en-australie",
           title: 'I started a post-doctoral position at Naval Group, hosted in the IRL CROSSING...',
           description: "",
-          section: "News",},{id: "news-co-organiser-of-the-facet-offshore-wind-maintenance-workshop-in-adelaide-gathering-30-participants-around-offshore-wind-operation-and-maintenance",
+          section: "News",},{id: "news-co-organiser-of-the-facet-offshore-wind-maintenance-workshop-in-adelaide-gathering-30-participants-around-offshore-wind-operation-and-maintenance-co-organisatrice-de-l-atelier-facet-sur-la-maintenance-de-l-éolien-en-mer-à-adelaide-qui-a-réuni-30-participants-autour-de-l-exploitation-et-de-la-maintenance-de-l-éolien-en-mer",
           title: 'Co-organiser of the FACET Offshore Wind Maintenance Workshop in Adelaide, gathering 30 participants...',
           description: "",
-          section: "News",},{id: "news-i-led-the-open-source-release-of-lotusim-the-first-open-source-simulator-in-naval-group-s-history",
+          section: "News",},{id: "news-i-led-the-open-source-release-of-lotusim-the-first-open-source-simulator-in-naval-group-s-history-j-ai-piloté-la-publication-en-open-source-de-lotusim-premier-simulateur-ouvert-de-l-histoire-de-naval-group",
           title: 'I led the open-source release of LOTUSim — the first open-source simulator in...',
           description: "",
-          section: "News",},{id: "news-our-paper-lotusim-multi-domain-simulator-for-marine-robotics-has-been-accepted-at-ieee-rsj-iros-2026-pittsburgh-rank-a-arxiv-video",
+          section: "News",},{id: "news-our-paper-lotusim-multi-domain-simulator-for-marine-robotics-has-been-accepted-at-ieee-rsj-iros-2026-pittsburgh-rank-a-arxiv-video-notre-article-lotusim-multi-domain-simulator-for-marine-robotics-a-été-accepté-à-ieee-rsj-iros-2026-pittsburgh-rang-a-arxiv-vidéo",
           title: 'Our paper LOTUSim: Multi-Domain Simulator for Marine Robotics has been accepted at IEEE/RSJ...',
           description: "",
-          section: "News",},{id: "news-our-paper-lotusim-energy-a-maritime-simulator-for-human-drone-interaction-in-autonomous-offshore-operation-amp-amp-maintenance-has-been-accepted-at-an-iros-2026-workshop",
+          section: "News",},{id: "news-our-paper-lotusim-energy-a-maritime-simulator-for-human-drone-interaction-in-autonomous-offshore-operation-amp-amp-maintenance-has-been-accepted-at-an-iros-2026-workshop-notre-article-lotusim-energy-a-maritime-simulator-for-human-drone-interaction-in-autonomous-offshore-operation-amp-amp-maintenance-a-été-accepté-à-un-atelier-d-iros-2026",
           title: 'Our paper LOTUSim-Energy: A Maritime Simulator for Human-Drone Interaction in Autonomous Offshore Operation...',
           description: "",
           section: "News",},{id: "projects-lotusim",
@@ -88,7 +88,7 @@ ninja.data = [{
               window.location.href = "/projects/4_aiv_collective_intelligence/";
             },},{id: "projects-projet-alpha",
           title: 'Projet Alpha',
-          description: "Airport baggage transport automation with AGV fleets (Alstef Group)",
+          description: "Automation of airport baggage transport with a fleet of autonomous industrial vehicles (Alstef Group), reusing ideas from my PhD.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_projet_alpha/";
             },},{
