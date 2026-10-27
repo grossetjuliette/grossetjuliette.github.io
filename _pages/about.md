@@ -65,6 +65,7 @@ Ma [**thèse**](/projects/4_aiv_collective_intelligence/), préparée à l'IMT A
 ## {% include t.liquid en="Featured projects" fr="Projets phares" %} {#featured-projects}
 
 {% assign featured = site.projects | sort: "importance" %}
+
 <div class="project-grid project-grid-home">
   {% for project in featured limit: 3 %}
     {% include project_card.liquid %}
